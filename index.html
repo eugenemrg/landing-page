@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/brands.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Landing page</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigation Container */
+        .navbar {
+            padding: 12px 32px;
+            display: grid;
+            border: 2px solid black;
+            align-content: center;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto;
+            grid-template-areas: "logo . navigation"
+        }
+
+        /* Logo */
+        #logo {
+            grid-area: logo;
+        }
+
+        #logo-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        #logo-link .pink {
+            color: #ff3a5b;
+        }
+
+        /* Navigation */
+        #navigation {
+            grid-area: navigation;
+        }
+
+        #navigation-list {}
+
+        .nav-links {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0px 8px;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        /* Main Content Container */
+        
+        .main-container {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-areas: "one two";
+            align-content: center;
+        }
+
+        /* Content */
+        .content {
+            grid-area: one;
+            display: grid;
+            align-content: center;
+            padding: 48px;
+        }
+
+        .intro {
+            font-size: 4.8em;
+            font-weight: bold;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .intro span {
+            color: #ff3a5b;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .description {
+            padding: 8px 0px;
+            margin-bottom: 8px;
+        }
+
+        .cta-kyc {
+            padding: 8px 0px;
+            margin-bottom: 24px;
+        }
+
+        .cta-link {
+            background-color: #ff3a5b;
+            padding: 8px 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+
+        .cta-social {
+        }
+
+        .socials-link {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            padding: 8px;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin-right: 16px;
+        }
+
+        /* Photo */
+        #my-photo {
+            grid-area: two;
+        }
+
+        #my-photo img{
+            width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- logo -->
+        <div id="logo">
+            <a href="/" id="logo-link">
+                &lt; John <span class="pink">Doe</span> /&gt;
+            </a>
+        </div>
+
+        <!-- links -->
+        <nav id="navigation">
+            <a class="nav-links" href="#">About</a>
+            <a class="nav-links" href="#">Services</a>
+            <a class="nav-links" href="#">Skills</a>
+            <a class="nav-links" href="#">Experience</a>
+            <a class="nav-links" href="#">Projects</a>
+            <a class="nav-links" href="#">Contacts</a>
+        </nav>
+    </div>
+
+    <div class="main-container">
+        <div class="content">
+            <p class="intro">Hi, I'm <span>John Doe</span><br>Fullstack Developer</p>
+            <p class="description">Experienced Full Stack Developer with a demonstrated history of working in the
+                internet industry. Building Web applications with Angular, PHP, Laravel, Python, Django, Flask,
+                MYSQL/Postgres and some other cool libraries and frameworks.</p>
+            <div class="cta-kyc">
+                <a href="#" class="cta-link" id="resume">View Resume</a>
+                <a href="#" class="cta-link" id="contact">Contact Me</a>
+            </div>
+            <div class="cta-social">
+                <a href="#" class="socials-link"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="socials-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="socials-link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="socials-link"><i class="fa-brands fa-google"></i></a>
+            </div>
+        </div>
+        <div id="my-photo">
+            <img src="./img/man-with-happy-expression.jpg" alt="" id="photo">
+        </div>
+    </div>
+</body>
+
+</html>
