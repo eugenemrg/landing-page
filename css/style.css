@@ -71,7 +71,7 @@ body {
 .main-container {
     display: grid;
     grid-template-columns: 65% 35%;
-    grid-template-rows: minmax(0, 1fr);
+    grid-template-rows: 1fr;
     grid-template-areas: "one two";
     align-content: center;
 }
@@ -144,11 +144,9 @@ body {
 /* Photo */
 #my-photo {
     grid-area: two;
-}
-
-#photo {
-    display: inline-block;
-    min-width: 0px;
-    width: 80%;
-    padding: 4px;
+    background-image: url('../img/man-with-happy-expression.jpg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 8px;
 }
