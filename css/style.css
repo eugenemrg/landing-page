@@ -33,7 +33,8 @@ body {
     grid-area: logo;
 }
 
-#logo *{
+/* Used this font-family as it suited logo text better */
+#logo * {
     font-family: 'Roboto Slab', serif;
 }
 
