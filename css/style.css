@@ -33,6 +33,10 @@ body {
     grid-area: logo;
 }
 
+#logo *{
+    font-family: 'Roboto Slab', serif;
+}
+
 #logo-link {
     text-decoration: none;
     color: black;
