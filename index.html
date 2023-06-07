@@ -22,11 +22,22 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+
         /* Navigation Container */
         .navbar {
-            padding: 12px 32px;
+            padding: 16px 48px;
             display: grid;
-            border: 2px solid black;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             align-content: center;
             grid-template-columns: auto 1fr auto;
             grid-template-rows: auto;
@@ -42,34 +53,41 @@
             text-decoration: none;
             color: black;
             font-weight: bold;
-            font-size: 1.4em;
+            font-size: 1.6em;
         }
 
         #logo-link .pink {
-            color: #ff3a5b;
+            color: #f90550;
         }
 
         /* Navigation */
         #navigation {
             grid-area: navigation;
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            column-gap: 24px;
+            align-content: center;
+            z-index: 2;
         }
-
-        #navigation-list {}
 
         .nav-links {
             display: inline-block;
-            vertical-align: middle;
-            padding: 0px 8px;
             text-decoration: none;
             color: black;
             text-transform: uppercase;
+            font-size: 1em;
+        }
+
+        .nav-links:hover {
+            color: #f90550;
         }
 
         /* Main Content Container */
-        
+
         .main-container {
             display: grid;
             grid-template-columns: 65% 35%;
+            grid-template-rows: minmax(0, 1fr);
             grid-template-areas: "one two";
             align-content: center;
         }
@@ -83,38 +101,44 @@
         }
 
         .intro {
-            font-size: 4.8em;
+            font-size: 5.4em;
             font-weight: bold;
             font-family: 'Roboto Slab', serif;
         }
 
         .intro span {
-            color: #ff3a5b;
+            color: #f90550;
             font-family: 'Roboto Slab', serif;
         }
 
         .description {
-            padding: 8px 0px;
-            margin-bottom: 8px;
+            margin: 16px 0px;
+            font-size: 1.2em;
         }
 
         .cta-kyc {
             padding: 8px 0px;
-            margin-bottom: 24px;
+            margin: 16px 0px;
         }
 
         .cta-link {
-            background-color: #ff3a5b;
-            padding: 8px 12px;
+            background-color: #f90550;
+            padding: 10px 16px;
             color: white;
             font-weight: bold;
             font-size: 1.2em;
             border-radius: 8px;
             text-decoration: none;
             margin-right: 16px;
+            text-transform: capitalize;
+        }
+
+        .cta-link:hover {
+            background-color: black;
         }
 
         .cta-social {
+            margin: 16px 0px;
         }
 
         .socials-link {
@@ -122,10 +146,15 @@
             color: black;
             display: inline-block;
             padding: 8px;
-            border: 2px solid black;
+            border: 2.4px solid black;
             border-radius: 8px;
             font-size: 1.2em;
             margin-right: 16px;
+        }
+
+        .socials-link:hover {
+            color: #f90550;
+            border-color: #f90550;
         }
 
         /* Photo */
@@ -133,9 +162,11 @@
             grid-area: two;
         }
 
-        #my-photo img{
-            width: 400px;
-            height: auto;
+        #photo {
+            display: inline-block;
+            min-width: 0px;
+            width: 80%;
+            padding: 4px;
         }
     </style>
 </head>
@@ -144,7 +175,7 @@
     <div class="navbar">
         <!-- logo -->
         <div id="logo">
-            <a href="/" id="logo-link">
+            <a href="#" id="logo-link">
                 &lt; John <span class="pink">Doe</span> /&gt;
             </a>
         </div>
