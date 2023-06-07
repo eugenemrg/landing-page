@@ -148,7 +148,7 @@ body {
 /* Photo */
 #my-photo {
     grid-area: two;
-    background-image: url('../img/man-with-happy-expression.jpg');
+    background-image: url('../img/man-with-happy-expression-840px.jpg');
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
